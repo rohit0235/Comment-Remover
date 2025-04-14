@@ -20,13 +20,6 @@ With the rise of AI coding assistants, there's been a surge in auto-generated co
 - ⚙️ Backend powered by Flask
 - 📦 Easy to set up locally
 
----
-
-## 📸 Demo
-
-![Code Comment Remover Screenshot](preview.png) <!-- Add your screenshot image here -->
-
----
 
 ## 🚀 How to Run
 
@@ -35,6 +28,25 @@ With the rise of AI coding assistants, there's been a surge in auto-generated co
 ```bash
 git clone https://github.com/your-username/code-comment-remover.git
 cd code-comment-remover
+
+
+2. Install dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+3. Run the app
+bash
+Copy
+Edit
+python app.py
+Then open your browser and go to:
+
+bash
+Copy
+Edit
+http://localhost:5000/static/index.html
+
 
 
 
