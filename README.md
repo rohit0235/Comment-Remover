@@ -28,25 +28,22 @@ With the rise of AI coding assistants, there's been a surge in auto-generated co
 ```bash
 git clone https://github.com/your-username/code-comment-remover.git
 cd code-comment-remover
+```
 
-
-2. Install dependencies
-bash
-Copy
-Edit
+**2. Install dependencies**
+```bash
 pip install -r requirements.txt
-3. Run the app
-bash
-Copy
-Edit
+```
+**3. Run the app**
+```bash
 python app.py
+
+```
 Then open your browser and go to:
-
-bash
-Copy
-Edit
+### 2. Run
+```bash
 http://localhost:5000/static/index.html
-
+```
 
 
 
