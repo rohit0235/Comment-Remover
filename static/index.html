@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Comment Remover</title>
+  <script defer>
+    async function removeComments() {
+      const code = document.getElementById("codeInput").value;
+      const language = document.getElementById("language").value;
+      const res = await fetch("/remove-comments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ code, language })
+      });
+      const data = await res.json();
+      document.getElementById("output").value = data.cleaned_code;
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-10 bg-gray-100">
+  <h1 class="text-3xl font-bold mb-4">Code Comment Remover</h1>
+  
+  <label class="block mb-2 font-semibold">Choose Language:</label>
+  <select id="language" class="mb-4 p-2 border rounded">
+    <option value="python">Python</option>
+    <option value="c">C</option>
+    <option value="cpp">C++</option>
+    <option value="java">Java</option>
+    <option value="javascript">JavaScript</option>
+  </select>
+
+  <label class="block mb-2 font-semibold">Paste Your Code:</label>
+  <textarea id="codeInput" class="w-full h-48 p-2 border rounded mb-4"></textarea>
+
+  <button onclick="removeComments()" class="bg-blue-500 text-white px-4 py-2 rounded">Remove Comments</button>
+
+  <label class="block mt-6 mb-2 font-semibold">Output Code:</label>
+  <textarea id="output" class="w-full h-48 p-2 border rounded"></textarea>
+</body>
+</html>
